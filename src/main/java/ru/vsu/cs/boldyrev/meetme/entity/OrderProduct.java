@@ -3,12 +3,12 @@ package ru.vsu.cs.boldyrev.meetme.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "customers")
-public class Customer {
-
+@Table(name = "order_products")
+public class OrderProduct {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String phone;
-    private String email;
+    private Product product;
+    private Integer quantity;
+    private Order order;
 }
