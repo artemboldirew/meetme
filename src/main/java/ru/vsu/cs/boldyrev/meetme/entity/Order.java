@@ -15,6 +15,5 @@ public class Order {
     private BigDecimal amount;
     private OrderStatus orderStatus;
     private PaymentStatus paymentStatus;
-
     private Customer customer;
 }
