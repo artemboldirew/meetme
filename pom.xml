@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ru.vsu.cs.boldyrev</groupId>
-	<artifactId>meetme</artifactId>
+	<artifactId>shopik</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>meetme</name>
+	<name>shopik</name>
 	<description>App for the meeting</description>
 	<url/>
 	<licenses>
