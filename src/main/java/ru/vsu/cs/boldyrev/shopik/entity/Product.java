@@ -1,13 +1,11 @@
-package ru.vsu.cs.boldyrev.meetme.entity;
+package ru.vsu.cs.boldyrev.shopik.entity;
 
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.time.LocalDateTime;
 
 @Entity

@@ -1,7 +1,7 @@
-package ru.vsu.cs.boldyrev.meetme.service;
+package ru.vsu.cs.boldyrev.shopik.service;
 
 import org.springframework.stereotype.Service;
-import ru.vsu.cs.boldyrev.meetme.entity.Product;
+import ru.vsu.cs.boldyrev.shopik.entity.Product;
 
 @Service
 public class ProductService {

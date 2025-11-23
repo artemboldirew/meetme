@@ -1,8 +1,8 @@
-package ru.vsu.cs.boldyrev.meetme.entity;
+package ru.vsu.cs.boldyrev.shopik.entity;
 
 import jakarta.persistence.*;
-import ru.vsu.cs.boldyrev.meetme.enums.OrderStatus;
-import ru.vsu.cs.boldyrev.meetme.enums.PaymentStatus;
+import ru.vsu.cs.boldyrev.shopik.enums.OrderStatus;
+import ru.vsu.cs.boldyrev.shopik.enums.PaymentStatus;
 
 import java.math.BigDecimal;
 

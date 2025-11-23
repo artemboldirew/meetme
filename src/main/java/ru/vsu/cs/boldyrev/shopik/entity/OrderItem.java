@@ -1,4 +1,4 @@
-package ru.vsu.cs.boldyrev.meetme.entity;
+package ru.vsu.cs.boldyrev.shopik.entity;
 
 import jakarta.persistence.*;
 

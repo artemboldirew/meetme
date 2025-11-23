@@ -1,4 +1,4 @@
-package ru.vsu.cs.boldyrev.meetme;
+package ru.vsu.cs.boldyrev.shopik;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
