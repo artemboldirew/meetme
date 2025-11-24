@@ -25,6 +25,12 @@ public class ProductController {
         return "";
     }
 
+
+    @GetMapping("")
+    public String testHello() {
+        return "Hello";
+    }
+
     @PostMapping("")
     public void addProduct(ProductDTO dto) {
 
