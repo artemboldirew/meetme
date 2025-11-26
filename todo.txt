@@ -1,8 +1,3 @@
-POST /products
-GET /products
-GET /products/{id}
-PUT /product/{id}
-DELETE /product/{id}
-GET /product/search
-GET /products/filter
+[x] Создать таблицы
+[] Вставить
 

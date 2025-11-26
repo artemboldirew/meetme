@@ -18,21 +18,23 @@ public class Product {
     @Column(unique = true, nullable = false)
     private String sku;
 
+    @Column(nullable = false)
     private String name;
 
-    @Column(precision = 2)
+    @Column(precision = 10, scale = 2)
     private BigDecimal price;
 
-
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     private Category category;
 
+    @Column(length = 1000)
     private String description;
 
-    @Column(name = "short_description")
+    @Column(name = "short_description", length = 500)
     private String shortDescription;
 
+    @Column(nullable = false, unique = true)
     private String slug;
 
     @CreationTimestamp

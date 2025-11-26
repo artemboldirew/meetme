@@ -13,16 +13,14 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(precision = 11, scale = 2, nullable = false)
     private BigDecimal amount;
 
-    @Column(name = "order_status")
-    private OrderStatus orderStatus;
-
+    @Enumerated(EnumType.STRING)
     @Column(name = "payment_status")
     private PaymentStatus paymentStatus;
 
-    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "customer_id")
     private Customer customer;
 }
