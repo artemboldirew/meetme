@@ -20,7 +20,20 @@ public class Order {
     @Column(name = "payment_status")
     private PaymentStatus paymentStatus;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "order_status")
+    private OrderStatus orderStatus;
+
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "customer_id")
     private Customer customer;
+
+    @Column(name = "delivery_address", nullable = false)
+    private String deliveryAddress;
+
+    @Column(name = "delivery_latitude", precision = 10, scale = 7, nullable = false)
+    private BigDecimal deliveryLatitude;
+
+    @Column(name = "delivery_longitude", precision = 10, scale = 7, nullable = false)
+    private BigDecimal deliveryLongitude;
 }

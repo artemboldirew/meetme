@@ -1,6 +1,7 @@
 package ru.vsu.cs.boldyrev.shopik.entity;
 
 import jakarta.persistence.*;
+import ru.vsu.cs.boldyrev.shopik.enums.OrderItemStatus;
 import ru.vsu.cs.boldyrev.shopik.enums.OrderStatus;
 
 import java.math.BigDecimal;
@@ -26,8 +27,8 @@ public class OrderItem {
     private LocalDate deliveryDate;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "order_status")
-    private OrderStatus orderStatus;
+    @Column(name = "item_status")
+    private OrderItemStatus orderItemStatus;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "order_id")

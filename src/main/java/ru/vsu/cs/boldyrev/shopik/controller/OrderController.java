@@ -1,6 +1,9 @@
 package ru.vsu.cs.boldyrev.shopik.controller;
 
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
+import ru.vsu.cs.boldyrev.shopik.dto.CreateOrderDTO;
+import ru.vsu.cs.boldyrev.shopik.entity.Order;
 import ru.vsu.cs.boldyrev.shopik.service.OrderService;
 
 @RestController
@@ -14,8 +17,8 @@ public class OrderController {
     }
 
     @PostMapping("")
-    public void createOrder() {
-
+    public Order createOrder(@Valid @RequestBody CreateOrderDTO dto) {
+        return orderService.createOrder(dto);
     }
 
     @GetMapping("/{id}")
