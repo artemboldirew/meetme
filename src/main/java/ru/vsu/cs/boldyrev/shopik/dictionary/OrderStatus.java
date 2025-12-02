@@ -1,4 +1,4 @@
-package ru.vsu.cs.boldyrev.shopik.enums;
+package ru.vsu.cs.boldyrev.shopik.dictionary;
 
 public enum OrderStatus {
     PENDING,        // Ожидает обработки

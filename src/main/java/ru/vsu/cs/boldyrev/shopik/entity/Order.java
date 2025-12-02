@@ -1,17 +1,18 @@
 package ru.vsu.cs.boldyrev.shopik.entity;
 
 import jakarta.persistence.*;
-import ru.vsu.cs.boldyrev.shopik.enums.OrderStatus;
-import ru.vsu.cs.boldyrev.shopik.enums.PaymentStatus;
+import ru.vsu.cs.boldyrev.shopik.dictionary.OrderStatus;
+import ru.vsu.cs.boldyrev.shopik.dictionary.PaymentStatus;
 
 import java.math.BigDecimal;
+import java.util.UUID;
 
 @Entity
 @Table(name = "orders")
 public class Order {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
 
     @Column(precision = 11, scale = 2, nullable = false)
     private BigDecimal amount;
