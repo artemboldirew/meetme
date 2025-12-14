@@ -9,10 +9,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.Type;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.boot.autoconfigure.amqp.RabbitConnectionDetails;
-import org.springframework.data.geo.Point;
+
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -24,8 +22,11 @@ public class PickupPoint {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column(columnDefinition = "geometry(Point, 4326)", nullable = false)
-    private Point location;
+    @Column(name = "latitude", nullable = false)
+    private Double latitude;
+
+    @Column(name = "longitude", nullable = false)
+    private Double longitude;
 
     @NotNull
     @Embedded

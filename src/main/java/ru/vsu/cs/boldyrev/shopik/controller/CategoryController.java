@@ -1,6 +1,9 @@
 package ru.vsu.cs.boldyrev.shopik.controller;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ru.vsu.cs.boldyrev.shopik.dto.category.CreateCategoryDTO;
+import ru.vsu.cs.boldyrev.shopik.entity.Category;
 import ru.vsu.cs.boldyrev.shopik.service.CategoryService;
 
 @RestController
@@ -14,8 +17,8 @@ public class CategoryController {
     }
 
     @PostMapping("")
-    public void createCategory() {
-
+    public Category createCategory(@RequestBody CreateCategoryDTO dto) {
+        return categoryService.createCategory(dto);
     }
 
     @GetMapping("/{id}")

@@ -29,12 +29,7 @@ public class Order {
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
-    @Column(name = "delivery_address", nullable = false)
-    private String deliveryAddress;
-
-    @Column(name = "delivery_latitude", precision = 10, scale = 7, nullable = false)
-    private BigDecimal deliveryLatitude;
-
-    @Column(name = "delivery_longitude", precision = 10, scale = 7, nullable = false)
-    private BigDecimal deliveryLongitude;
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "pickup_point_id")
+    private PickupPoint pickupPoint;
 }

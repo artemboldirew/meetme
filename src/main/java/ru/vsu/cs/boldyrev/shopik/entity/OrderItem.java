@@ -1,6 +1,7 @@
 package ru.vsu.cs.boldyrev.shopik.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import ru.vsu.cs.boldyrev.shopik.dictionary.OrderItemStatus;
 
 import java.math.BigDecimal;
@@ -16,11 +17,9 @@ public class OrderItem {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id")
-    private Product product;
+    private Product productId;
 
-    @Column(precision = 11, scale = 2, nullable = false)
-    private BigDecimal amount;
-
+    @NotNull
     private Integer quantity;
 
     @Column(name = "delivery_date")
