@@ -2,12 +2,10 @@ package ru.vsu.cs.boldyrev.shopik.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import ru.vsu.cs.boldyrev.shopik.entity.Product;
+import ru.vsu.cs.boldyrev.shopik.entity.PickupPoint;
 
-import java.util.Optional;
 import java.util.UUID;
 
 @Repository
-public interface ProductRepository extends JpaRepository<Product, UUID> {
-
+public interface PickupPointRepository extends JpaRepository<PickupPoint, UUID> {
 }

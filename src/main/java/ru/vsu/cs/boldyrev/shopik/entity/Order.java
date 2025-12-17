@@ -1,12 +1,18 @@
 package ru.vsu.cs.boldyrev.shopik.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import ru.vsu.cs.boldyrev.shopik.dictionary.OrderStatus;
 import ru.vsu.cs.boldyrev.shopik.dictionary.PaymentStatus;
 
 import java.math.BigDecimal;
 import java.util.UUID;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 @Entity
 @Table(name = "orders")
 public class Order {

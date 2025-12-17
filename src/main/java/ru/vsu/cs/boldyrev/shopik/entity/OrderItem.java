@@ -2,12 +2,14 @@ package ru.vsu.cs.boldyrev.shopik.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import lombok.Data;
 import ru.vsu.cs.boldyrev.shopik.dictionary.OrderItemStatus;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.UUID;
 
+@Data
 @Entity
 @Table(name = "order_items")
 public class OrderItem {
@@ -17,7 +19,7 @@ public class OrderItem {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id")
-    private Product productId;
+    private Product product;
 
     @NotNull
     private Integer quantity;
