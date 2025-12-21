@@ -2,3 +2,6 @@ databaseChangeLog:
   - include:
       relativeToChangelogFile: true
       file: "changelogs/changelog-1-create-base-tables.yaml"
+  - include:
+      relativeToChangelogFile: true
+      file: "changelogs/changelog-2-add-created_at-columns.yaml"

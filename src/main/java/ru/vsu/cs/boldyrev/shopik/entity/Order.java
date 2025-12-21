@@ -17,10 +17,13 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 import ru.vsu.cs.boldyrev.shopik.dictionary.OrderStatus;
 import ru.vsu.cs.boldyrev.shopik.dictionary.PaymentStatus;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -77,4 +80,18 @@ public class Order {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "pickup_point_id")
     private PickupPoint pickupPoint;
+
+    /**
+     * Дата и время создания записи (автоматически устанавливается)
+     */
+    @CreationTimestamp
+    @Column(name = "created_at", updatable = false)
+    private LocalDateTime createdAt;
+
+    /**
+     * Дата и время последнего обновления записи (автоматически обновляется)
+     */
+    @UpdateTimestamp
+    @Column(name = "updated_at")
+    private LocalDateTime updatedAt;
 }
