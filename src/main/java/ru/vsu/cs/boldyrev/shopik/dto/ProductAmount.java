@@ -1,16 +1,23 @@
 package ru.vsu.cs.boldyrev.shopik.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
-
-import java.math.BigDecimal;
 import java.util.UUID;
 
+/**
+ * DTO для указания количества конкретного продукта.
+ * <p>
+ * Используется при создании заказа ({@link CreateOrderDTO}) для передачи списка товаров и их количества.
+ * </p>
+ */
 @Getter
 public class ProductAmount {
-    @JsonProperty("product_id")
+
+    /** Идентификатор продукта */
+    @NotNull
     private UUID productId;
 
-    @JsonProperty("quantity")
+    /** Количество единиц товара */
+    @NotNull
     private Integer quantity;
 }
